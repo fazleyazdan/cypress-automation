@@ -21,6 +21,7 @@ describe('Test case: css selectors', () =>{
 
     })
 
+    // if it was a text inside a span tag or anything. then we would have used .contains methode e.g. cy.get(#q).contains("Nokia")
 
     // in the example code I provided, ($input) is a parameter passed to the callback function within the .should() command. 
     // you can write anything in place of input. it is just a representation
@@ -33,3 +34,6 @@ describe('Test case: css selectors', () =>{
     // and this parameter is represented by $input in the function.
     // Inside the callback function, expect($input.val()).to.equal('Nokia') checks that the value of the input field is equal to 'Nokia'. 
     // The .val() method is used to retrieve the current value of the input field.
+
+
+    
