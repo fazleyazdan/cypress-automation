@@ -1,4 +1,4 @@
-// practicing css selectors
+// practicing css selectors with callback function
 
 
 describe('Test case: css selectors', () =>{
@@ -12,16 +12,16 @@ describe('Test case: css selectors', () =>{
 
         // lets do some validation. wether 'nokia' is typed and searched or not
 
-        cy.get('#q').should('have.value', "Nokia")
+        // cy.get('#q').should('have.value', "Nokia")
     
-        //    cy.get('#q').should(($input) =>{
-    //         cy.expect($input.val()).to.equal('Nokia')
+        cy.get('#q').should(($input) =>{
+        cy.expect($input.val()).to.equal('Nokia')
 
-    //        })
-
-        })
+       })
 
     })
+
+})
 
     // if it was a text inside a span tag or anything. then we would have used .contains methode e.g. cy.get(#q).contains("Nokia")
 
