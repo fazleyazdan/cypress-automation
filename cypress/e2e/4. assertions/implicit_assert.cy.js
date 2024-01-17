@@ -30,4 +30,57 @@ describe('implicit Assertions', () =>{
         
         // uncomment the above example if you want to check it . the last one is less coding compared to the others
     })
+
+
+       // we can also use not.eq, not.contain and not.include in assertions
+
+    it('negative assertion', () =>{
+
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.url().should('not.include', 'orangehrmlive.commm')
+        .and('not.eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login[distort url]')  // distort the url for this
+        .and('not.contain', 'greenhrm')
+       
+    })
+
+    it('assertion on title', () =>{
+
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        cy.title().should('include', 'Orange')
+        .and('eq', 'OrangeHRM')  
+        .and('contain', 'HRM')
+       
+    })
+
+
+// > sign incicates child of 
+// in assertion it is good to check whether the 1. element is visible and 2. the element exist
+
+it('assertion on logo', () =>{
+    
+    // simple version
+    // cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    // cy.get('.orangehrm-login-branding > img').should('be.visible')  
+    // cy.get('.orangehrm-login-branding > img').should('exist')
+
+
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.get('.orangehrm-login-branding > img').should('be.visible')  
+    .and('exist')
+   
+})
+
+it('assertion :validate number of elements', () =>{
+    
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.xpath('//a').should('have.length', '5')  
+})
+
+it('validate the typed username', () =>{
+    
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.xpath("//input[@placeholder='Username']").type('Admin')
+    cy.xpath("//input[@placeholder='Username']").should('have.value', 'Admin')
+
+})
 })
