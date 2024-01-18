@@ -77,7 +77,8 @@ npm -i init --> creates package.json file
 ```npm install cypress -- save -dev```
 
 6) start cypress
-```npx cypress open```    (or)
+```npx cypress open```    
+        (or)
 ```node_modules/.bin/cypress open```
 
 
@@ -122,9 +123,10 @@ A library is a collection of pre-written code or routines that can be used by ot
 
 **Write Test case:**
 
-#### Describe is test suit . replace 'suit name' with your desired suit name
+#### "describe" is test suit . replace 'suit name' with name of your choice
 
-```describe('suit name', () => {
+```javascript
+describe('suit name', () => {
     it('Does not do much!', () => {
       expect(true).to.equal(true)
     })
@@ -145,7 +147,8 @@ describe('suit name', () => {
 
 // There can be multiple test cases inside a suit.
 
-```describe('suit name', () => {
+
+describe('suit name', () => {
 
     it('test case 1', () => {
       expect(true).to.equal(true)
@@ -159,8 +162,7 @@ describe('suit name', () => {
       expect(true).to.equal(true)
     })
 
-  })
-```
+  }) ```
 
 # testsuit --> testcase --> test steps
 
