@@ -49,6 +49,7 @@ describe('implicit Assertions', () =>{
         cy.title().should('include', 'Orange')
         .and('eq', 'OrangeHRM')  
         .and('contain', 'HRM')
+        
        
     })
 
