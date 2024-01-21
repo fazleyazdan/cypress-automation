@@ -37,7 +37,7 @@ describe('implicit Assertions', () =>{
     it('negative assertion', () =>{
 
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-        cy.url().should('not.include', 'orangehrmlive.commm')
+        cy.url().should('not.include', 'greenhrmlive.commm')                               
         .and('not.eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login[distort url]')  // distort the url for this
         .and('not.contain', 'greenhrm')
        
