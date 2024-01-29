@@ -162,7 +162,25 @@ describe('suit name', () => {
       expect(true).to.equal(true)
     })
 
-  }) ```
+  }) 
+  
+//   when you have more than one testcase in a suit and want to skip one when executing then you can so so by writing "it.skip"
+  describe('suit name', () => {
+
+    it.skip('test case 1', () => {
+      expect(true).to.equal(true)
+    })
+
+	it('test case 2', () => {
+      expect(true).to.equal(true)
+    })
+
+	it('test case 3', () => {
+      expect(true).to.equal(true)
+    })
+
+  })
+  ```
 
 # testsuit --> testcase --> test steps
 
