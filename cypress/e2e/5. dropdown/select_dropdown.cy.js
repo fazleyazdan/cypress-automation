@@ -22,7 +22,7 @@ describe('testing UI Elements', () => {
 
     // bootstrap dropdown does not have select tag. they usually have span tag 
 
-    it.skip('bootstrap dropdown without select tag', () => {
+    it('bootstrap dropdown without select tag', () => {
       
         cy.visit("https://www.dummyticket.com/dummy-ticket-for-visa-application/")
         
@@ -38,12 +38,28 @@ describe('testing UI Elements', () => {
 
     })
 
-    it('testing autosuggested dropdown', () => {
+    it.skip('testing static autosuggested dropdown', () => {
       
         cy.visit("https://www.wikipedia.org/")
         
         // when we type something into the input. a dropdown containing autosuggestion appear.
         // we will capture all the suggestion and by using 'contains' we will click our desired suggestion.
+        // it is static in a sense that the number of suggestion showed for an entry is always 5.
+        cy.get("#searchInput").type('pakistan')
+        cy.get(".suggestion-title").contains('Pakistan').click()
+        
+        // captured all suggestion after typing and then clicked our desired country
+
+    })
+
+
+    it('testing dynamic autosuggested dropdown', () => {
+      
+        cy.visit("https://www.google.com/")
+        
+        // when we type something into the input. a dropdown containing autosuggestion appear.
+        // we will capture all the suggestion and by using 'contains' we will click our desired suggestion.
+        // it is dynamic in a sense that the number of suggestion showed for an entry is vary.
 
         cy.get("#searchInput").type('pakistan')
         cy.get(".suggestion-title").contains('Pakistan').click()
