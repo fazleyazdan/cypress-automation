@@ -32,9 +32,10 @@ it('javascript alerts', () => {
 //2) Javascript Confirm Alert: It will have some text with 'OK' and 'Cancel' buttons
 // for confirm alert we will use another event, 'window:confirm'
 // confirm alert has 'ok' and 'cancel' button. and by default cypress will click 'ok' button to close the alert
+// To close confirm alert using 'cancel' button we will use another event
 
 
-it.only('javascript confirm alerts', () => {
+it('JS confirm alerts - click Ok', () => {
 
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
     cy.get("button[onclick='jsConfirm()']").click()
@@ -49,4 +50,19 @@ it.only('javascript confirm alerts', () => {
 
    })
 
+   it.only('JS confirm alerts - click Cancel', () => {
+
+    cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
+    cy.get("button[onclick='jsConfirm()']").click()
+
+    cy.on('window:confirm', (x) => {
+    
+        expect(x).to.contains('I am a JS Confirm')
+    
+    })
+    
+    cy.on('window:confirm', () => false)
+    cy.get("#result").should('have.text','You clicked: Cancel')        //this text is displayed after clicking alert
+
+   })
 })
