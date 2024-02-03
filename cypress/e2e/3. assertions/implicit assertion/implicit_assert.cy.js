@@ -54,10 +54,10 @@ describe('implicit Assertions', () =>{
     })
 
 
-// > sign incicates child of 
-// in assertion it is good to check whether the 1. element is visible and 2. the element exist
+    // > sign incicates child of 
+    // in assertion it is good to check whether the 1. element is visible and 2. the element exist
 
-it('assertion on logo', () =>{
+    it('assertion on logo', () =>{
     
     // simple version
     // cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -69,19 +69,19 @@ it('assertion on logo', () =>{
     cy.get('.orangehrm-login-branding > img').should('be.visible')  
     .and('exist')
    
-})
+    })
 
-it('assertion :validate number of elements', () =>{
+    it('assertion :validate number of elements', () =>{
     
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.xpath('//a').should('have.length', '5')  
-})
+    })
 
-it('validate the typed username', () =>{
+    it('validate the typed username', () =>{
     
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
     cy.xpath("//input[@placeholder='Username']").type('Admin')
     cy.xpath("//input[@placeholder='Username']").should('have.value', 'Admin')
 
-})
+    })
 })
