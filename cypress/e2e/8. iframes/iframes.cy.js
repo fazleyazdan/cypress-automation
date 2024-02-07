@@ -1,6 +1,7 @@
 //! cypress by default can't handle iframes, however we will use certain methods to achieve our purpose
 //* in iframe there is separate html document. i.e head, title , body 
 
+import 'cypress-iframe'
 
 describe('Handling Iframes', () =>{
 
@@ -33,5 +34,33 @@ describe('Handling Iframes', () =>{
         //* This is useful for chaining further Cypress commands to interact with the wrapped subject.
 
     })
+
+    it('Approach 2 - cypress custom commands', () =>{
+
+        //* in cypress we write custom commands in commnand.js.
+        //* if we want to use the same iframe in other test case we have to write it again, which is time consuming.
+        //* instead we will make a custom command by avoiding repeatition and saving time.
+
+        cy.visit('https://the-internet.herokuapp.com/iframe')           // Parent Tab
+        
+        cy.wait(5000)
+        cy.getIframe('#mce_0_ifr').clear().type("Welcome! {ctrl+a}")                           
+        //* we pass locator of iframe to function, now we can chain the other commands as well
+        
+        cy.get("button[title='Bold']").click()                         
+
+    })
+    
+    it.only('Approach 3 - by using cypress-iframe plugin', () =>{
+
+        //* first install plugin 'npm install -D cypress-iframe' and then 'import cypress-iframe'
+
+        cy.visit('https://the-internet.herokuapp.com/iframe')         
+        
+        cy.frameLoaded('#mce_0_ifr')                                 //* load/switch to iframe
+        cy.iframe('#mce_0_ifr').clear().type("Welcome! {ctrl+a}")    //* cy.iframe used to interact with the iframe
+        cy.get("button[title='Bold']").click()                         
+
+    })   
 
 })
