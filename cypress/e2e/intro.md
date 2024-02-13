@@ -125,6 +125,10 @@ A library is a collection of pre-written code or routines that can be used by ot
 
 #### "describe" is test suit . replace 'suit name' with name of your choice
 
+**In Cypress, it's not conventional to write test cases without using the describe() block. 
+The describe() block is used to group related test cases into a test suite, which helps in organizing and structuring your tests. 
+However, Cypress doesn't strictly enforce the use of describe(), and you can technically write test cases without it.**
+
 ```javascript
 describe('suit name', () => {
     it('Does not do much!', () => {
