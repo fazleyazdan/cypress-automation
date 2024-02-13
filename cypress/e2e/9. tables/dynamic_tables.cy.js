@@ -4,7 +4,7 @@
 // if the table was static then there are simple methods by which we can capture the text and elements.
 
 
-describe ('Handling tables', () => {
+describe ('Handling dynamic tables', () => {
 
     //* beforeEach hooks: in this block we write steps which we want to execute before each test case.
     //! one of its benefit is that it reduce lines of code and repetition.

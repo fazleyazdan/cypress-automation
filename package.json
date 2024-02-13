@@ -13,7 +13,7 @@
   "author": "fazle yazdan",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.6.2"
+    "cypress": "^13.6.4"
   },
   "devDependencies": {
     "cypress-iframe": "^1.0.1",
