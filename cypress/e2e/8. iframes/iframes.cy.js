@@ -13,6 +13,7 @@ describe('Handling Iframes', () =>{
                         .its("0.contentDocument.body")
                         .should("be.visible")
                         .then(cy.wrap)
+                
         
         iframe.clear().type("Welcome! {ctrl+a}")                       // {ctrl+a} will select the entire text inside the text box
         cy.get("button[title='Bold']").click()                         // click button to bold the text
@@ -30,6 +31,8 @@ describe('Handling Iframes', () =>{
         //* .should("be.visible") : Assertion on the body that we are accessing should be visible
         
         //! .then(cy.wrap) 
+        //* sometimes we use jquery function to on an element to get the job done.
+        //* now to use cypress commands/methods with that element you have to convert it back to cypress layer. using cy.wrap
         //* .then(cy.wrap) is a Cypress command that wraps the previous subject (the body element inside the iframe) and returns it.
         //* This is useful for chaining further Cypress commands to interact with the wrapped subject.
 
