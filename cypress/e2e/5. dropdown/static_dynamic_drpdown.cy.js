@@ -59,11 +59,12 @@ describe('testing UI Elements', () => {
 //* As you can see on line 34, we use jquery function to interact with element
 //* now methods like click() is available for cypress but Jquery element cannot use it.
 //* cy.wrap() comes handy in this situation, it converts the element back into cypress to use the cypress methods/privilleges 
+//! Note : you can also accomplish click or some other task using jquery but that activity won't be shown in cypress runner
 
 
 
 
-//* Details
+//! Details
 // When cy.wrap() is used in conjunction with .each(), it allows you to wrap each item in the collection obtained by cy.get()
 // with a Cypress object. This can be helpful if you want to perform Cypress commands or assertions on each individual item 
 // within the collection.

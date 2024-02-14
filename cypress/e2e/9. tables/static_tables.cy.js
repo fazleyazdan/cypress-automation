@@ -32,6 +32,7 @@ describe('static tables', () => {
       })
 
       it.only('check cell data from specific row & col', () => {
+        
 
       })
 
