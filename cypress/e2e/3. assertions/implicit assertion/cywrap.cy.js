@@ -17,7 +17,7 @@ describe("understanding cy.wrap()", () => {
         // Check Array includes an Item
         let playlists = ["JavaScript", "TypeScript", "Cypress", "Mocha, Chai & Sinon",
         "jQuery", "Xpath", "Important API Testing 101 Concepts", "Postman"]
-        // playlists.should("include", "Cypress")        //* this will throw error "playlists.should is not a function"
+        // playlists.should("include", "Cypress")        //* this will throw error "playlists.should is not a function".
         cy.wrap(playlists).should("include", "Cypress")     
         
         })
