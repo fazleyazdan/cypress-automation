@@ -44,7 +44,7 @@ describe('Mouse Operation', ()=> {
         cy.xpath("//span[normalize-space()='Edit']").should('be.visible')
     })
 
-    it.only('Double clcik', ()=> {
+    it('Double clcik', ()=> {
 
         cy.visit("https://testautomationpractice.blogspot.com/")
 
@@ -55,9 +55,19 @@ describe('Mouse Operation', ()=> {
         //! Approach 2 : dblclick()
         cy.get("button[ondblclick='myFunction1()']").dblclick()
         cy.get("#field2").should('have.value', 'Hello World!')
-   
-
+        //* by double clicking the element the text is copied into another box. i have put assertion on wether the text is copied or not.
+        
     })
 
     it.only('Drag and Drop', ()=> {
+        //! we will use a plugin for drag & drop
+        cy.visit("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html")
+        // cy.get('#box6').drag('#box106')
+        
+        //! we get the following error by running the above statement. so we have to forcefully do it by using force
+        // "This element <div#box6.dragableBox> is not visible because it has CSS property: visibility: hidden"
+        cy.get('#box6').drag('#box106', {force:true})
+    
+    })
+
 })
