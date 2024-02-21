@@ -19,7 +19,7 @@ describe('Mouse Operation', ()=> {
         cy.get('[href="#top"]').click()
     })
 
-    it.only('simple mouse hover', ()=> {
+    it('simple mouse hover', ()=> {
 
         cy.visit('https://practice-automation.com/hover/')
         cy.get("#mouse_over").trigger('mouseover').click()
@@ -32,7 +32,32 @@ describe('Mouse Operation', ()=> {
             })
     })
 
-    it.only('Right clcik', ()=> {
-        
+    it('Right clcik', ()=> {
+      
+        cy.visit("https://swisnl.github.io/jQuery-contextMenu/demo.html")
+
+        //! Approach 1:
+        // cy.get(".context-menu-one.btn.btn-neutral").trigger('contextmenu')
+
+        //! Approach 2:
+        cy.get(".context-menu-one.btn.btn-neutral").rightclick()
+        cy.xpath("//span[normalize-space()='Edit']").should('be.visible')
     })
+
+    it.only('Double clcik', ()=> {
+
+        cy.visit("https://testautomationpractice.blogspot.com/")
+
+        //! Approach 1 : trigger()
+        // cy.get("button[ondblclick='myFunction1()']").trigger('dblclick')
+        // cy.get("#field2").should('have.value', 'Hello World!')
+
+        //! Approach 2 : dblclick()
+        cy.get("button[ondblclick='myFunction1()']").dblclick()
+        cy.get("#field2").should('have.value', 'Hello World!')
+   
+
+    })
+
+    it.only('Drag and Drop', ()=> {
 })
