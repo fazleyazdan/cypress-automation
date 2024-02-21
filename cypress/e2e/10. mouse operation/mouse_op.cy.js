@@ -1,5 +1,6 @@
 // trigger() method is used to programmatically trigger events on DOM elements. 
 // This can be useful for simulating user interactions such as clicks, keypresses, etc.
+//! make sure add 'import or require to e2e folder" for the plugins used in these test cases 
 
 describe('Mouse Operation', ()=> {
 
@@ -59,15 +60,23 @@ describe('Mouse Operation', ()=> {
         
     })
 
-    it.only('Drag and Drop', ()=> {
+    it('Drag and Drop', ()=> {
         //! we will use a plugin for drag & drop
         cy.visit("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html")
-        // cy.get('#box6').drag('#box106')
-        
+    
+        // cy.get('#box6').drag('#box106')  
         //! we get the following error by running the above statement. so we have to forcefully do it by using force
         // "This element <div#box6.dragableBox> is not visible because it has CSS property: visibility: hidden"
+        
         cy.get('#box6').drag('#box106', {force:true})
-    
+        
     })
 
+    it.only('Scrolling', ()=> {
+        cy.visit("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+        cy.wait(2000)
+        cy.get("img[alt='Flag of Pakistan']").scrollIntoView()                          //* direct scrolling
+        cy.xpath("//img[@alt='Flag of Afghanistan']").scrollIntoView({duration:2000})   //* scroll in 2 sec
+        cy.get("#footer").scrollIntoView()                                              //* scroll to footer directly
+    })
 })
