@@ -1,5 +1,7 @@
 // first install cypress file upload plugin. [npm install cypress --save-dev cypress-file-upload]
 //! Note : keep the file in fixture folder, that you want to upload 
+//! Note : the button which is responsible for file upload, has an attribute called [type = 'file'].
+//! Note : attachFile will only work with button which has this attribute.
 
 describe('handling file upload', ()=> {
 
