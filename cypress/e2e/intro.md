@@ -168,8 +168,10 @@ describe('suit name', () => {
 
   }) 
   
-//   when you have more than one testcase in a suit and want to skip one when executing then you can so so by writing "it.skip"
-  describe('suit name', () => {
+*when you have more than one testcase in a suit and want to skip one when executing then you can so so by writing "it.skip"*
+*They are called cypress tags. there is one more tag used widely. it.only for running specific test case in a test suit*
+ 
+ describe('suit name', () => {
 
     it.skip('test case 1', () => {
       expect(true).to.equal(true)
@@ -179,7 +181,7 @@ describe('suit name', () => {
       expect(true).to.equal(true)
     })
 
-	it('test case 3', () => {
+	it.only('test case 3', () => {
       expect(true).to.equal(true)
     })
 
