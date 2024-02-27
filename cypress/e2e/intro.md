@@ -139,7 +139,7 @@ describe('suit name', () => {
 
 // A test suit can have many Test cases. "it" represent a test case.
 
-() => is an arrow function. We can also write it like this
+() => is an arrow function. We can also write it like this.
 
 describe('suit name', () => {
     it('Does not do much!', function() {
