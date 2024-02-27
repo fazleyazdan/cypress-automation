@@ -29,6 +29,7 @@ describe('fixtures test suit', () => {
         })
         cy.log("*** test case passed ***") 
         
+        //* cy.fixture('practicetest) --> then(data) : data present in fixture is stored in 'data', so that we can use it further.
     }) 
 
 }) 
