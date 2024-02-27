@@ -1,0 +1,21 @@
+
+[
+    {
+    "username" : "student",
+    "password" : "Password123",
+    "expected" : "Logged In Successfully"
+    },
+    {
+    "username" : "stdnt",
+    "password" : "Password123",
+    "expected" : "Your username is invalid!"
+    },
+    {
+    "username" : "student",
+    "password" : "Passrd",
+    "expected" : "Your password is invalid!"
+    }
+
+]
+
+

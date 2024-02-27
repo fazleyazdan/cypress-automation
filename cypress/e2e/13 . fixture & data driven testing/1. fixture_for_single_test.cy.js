@@ -3,10 +3,9 @@
 // for this task i have created a json file named 'practicetest.json' in fixture folder.
 // this file contains login data for the 'practicetestautomation' website.
 
-
 describe('fixtures test suit', () => {
 
-    it('without using fixture', () => {
+   it('without using fixture', () => {
 
         cy.visit("https://practicetestautomation.com/practice-test-login/")   
         cy.get("#username").type("student")
@@ -16,12 +15,12 @@ describe('fixtures test suit', () => {
         cy.get(".post-title").should('have.text', 'Logged In Successfully')
         cy.log("*** test case passed ***")
 
-    })
+    }) 
 
     it.only('fixture Demo', () => {
         
         cy.visit("https://practicetestautomation.com/practice-test-login/")   
-        cy.fixture('practicetest').then( (data) => {
+        cy.fixture('practicetest').then( (data) => {                 //! 'practicetest' is the name of file in fixtures folder
             cy.get("#username").type(data.username)
             cy.get("#password").type(data.password)
             cy.get("#submit").click()
@@ -30,8 +29,8 @@ describe('fixtures test suit', () => {
         })
         cy.log("*** test case passed ***") 
         
-    })
+    }) 
 
-  })
-
+}) 
+ 
 
