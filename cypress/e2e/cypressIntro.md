@@ -149,7 +149,7 @@ describe('suit name', () => {
 
 // Multiple test cases:
 
-// There can be multiple test cases inside a suit.
+// There can be multiple test cases inside a test suit.
 
 
 describe('suit name', () => {
