@@ -8,6 +8,11 @@ describe('custom commands suit', () => {
 
     it('handling links', () => {
      
+        cy.visit("https://demo.nopcommerce.com/")
+
+        //! direct approach - without using custom commands
+        cy.get("h2.product-title>a[href$='/apple-macbook-pro-13-inch']").click()
+        cy.get("div[class='product-name'] h1").should('have.text', "Apple MacBook Pro 13-inch")
     })
 
     it('test case 2', () => {
