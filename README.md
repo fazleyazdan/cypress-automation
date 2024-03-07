@@ -98,3 +98,13 @@ e.g. ```npx cypress run --spec "cypress\e2e\2. going forward\visit_web.cy.js"```
 
 Now by default the test case runs in electron browser so to change.
  ```npx cypress run --browser chrome --headed [for headed mode]```
+
+
+#### Fixtures Folder :
+in cypress, **fixture** is a folder in which we keep test data files which can be used for testing.
+it can be an image, an excel sheet or json file which contains some data in json format.
+
+#### Custom Commands :
+sometimes in cypress you have to write custom commands for performing certain tasks
+we write custom commands in *'commands.js'* which is inside *support* folder
+**Note :** for all custom commands we have wrote script in 'commands.js file'
