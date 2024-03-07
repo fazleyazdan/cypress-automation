@@ -33,12 +33,12 @@ describe("page object model", ()=> {
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         
         //* to access page object class members we have to create its object first
-        const pomobject = new Login()
+        const pomObject = new Login()
 
-        pomobject.typeUsername('Admin')
-        pomobject.typePassword('admin123')
-        pomobject.clickSubmit()
-        pomobject.verifyLogin()
+        pomObject.typeUsername('Admin')
+        pomObject.typePassword('admin123')
+        pomObject.clickSubmit()
+        pomObject.verifyLogin()
 
     })
 
@@ -50,12 +50,12 @@ describe("page object model", ()=> {
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         
         //* to access page object class members we have to create its object first
-        const pomobject = new SecondLogin()
+        const pomObject = new SecondLogin()
 
-        pomobject.typeUsername('Admin')
-        pomobject.typePassword('admin123')
-        pomobject.clickSubmit()
-        pomobject.verifyLogin()
+        pomObject.typeUsername('Admin')
+        pomObject.typePassword('admin123')
+        pomObject.clickSubmit()
+        pomObject.verifyLogin()
 
     })
 
@@ -65,14 +65,14 @@ describe("page object model", ()=> {
 
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         
-        const pomobject = new SecondLogin()
+        const pomObject = new SecondLogin()
         
         cy.fixture('orangehrm').then((data) =>
         {
-            pomobject.typeUsername(data.username)
-            pomobject.typePassword(data.password)
-            pomobject.clickSubmit()
-            pomobject.verifyLogin()
+            pomObject.typeUsername(data.username)
+            pomObject.typePassword(data.password)
+            pomObject.clickSubmit()
+            pomObject.verifyLogin()
 
         })
     })
