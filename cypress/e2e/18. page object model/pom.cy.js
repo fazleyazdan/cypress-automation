@@ -7,7 +7,6 @@
 //*  Page Object Model (Pom) : Page object model pattern is a separate file in which we store all locators of a page That we need. 
 //* One of the benefit of pom is that the locators are separated from the rest of the script and we no need to write it again.
 //* Pom supports the idea to store all locators once and use it whenever it is needed.
-
 //* For every page there will be a separate page object model
 
 //! Note : for POM we will create a new folder in cypress called "pageObjects". and to use it we have to import it
