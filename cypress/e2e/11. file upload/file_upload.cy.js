@@ -5,7 +5,7 @@
 
 describe('handling file upload', ()=> {
 
-    it('single file uplaod', ()=> {
+    it.only('single file upload', ()=> {
 
         cy.visit("https://the-internet.herokuapp.com/upload")
         cy.get("#file-upload").attachFile('dummy-1.pdf')     //! '#file-upload' locator of choose file   
@@ -16,7 +16,7 @@ describe('handling file upload', ()=> {
 
     })
 
-    it('single file uplaod - rename file when uploading', ()=> {
+    it('single file upload - rename file when uploading', ()=> {
         //* change the name of file at the time of upload. 
         //* filePath refers to the actual file in fixture folder.
         //* fileName used for changing the file name. 
@@ -58,6 +58,17 @@ describe('handling file upload', ()=> {
         cy.wait(2000)
         cy.get(".smart-item-name", {includeShadowDom:true}).should('have.text','dummy-2.pdf')
         
+    })
+
+    it.only('single file upload-1', ()=> {
+
+        cy.visit("https://practice.expandtesting.com/upload")
+        cy.get("#fileInput").attachFile('dummy-1.pdf')     //! '#file-upload' locator of choose file   
+        cy.get("#fileSubmit").click()
+        cy.wait(3000)
+        //* after uploading a file , 'file uploaded' message is displayed. put assertion on it.
+        cy.get("div[class='container'] h1").should('have.text', 'File Uploaded!')
+
     })
 })
 
