@@ -12,7 +12,7 @@ class SecondLogin
 
     typeUsername(username)
     {
-        cy.get(this.userNameLoc).type(username)            //! this referrs to current class
+        cy.get(this.userNameLoc).type(username)            //! this refers to current class
     }
 
     typePassword(password)
