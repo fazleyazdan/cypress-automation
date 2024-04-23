@@ -45,7 +45,7 @@ describe('Mouse Operation', ()=> {
         cy.xpath("//span[normalize-space()='Edit']").should('be.visible')
     })
 
-    it('Double clcik', ()=> {
+    it('Double click', ()=> {
 
         cy.visit("https://testautomationpractice.blogspot.com/")
 
