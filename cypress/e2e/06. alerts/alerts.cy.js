@@ -1,4 +1,4 @@
-// cypress by default will handle alerts. we don't need to write separte code for that.
+// cypress by default will handle alerts. we don't need to write separate code for that.
 // but if you want to do some validations on alerts then you have to write scripts for that
 // we will use events in order to do validations on alerts
 //! Note : There are many test cases but i have used 'it.only', so only one test case will be executed.
