@@ -7,3 +7,6 @@
 //* npx cypress run --headed --spec "relative path of test"
 //! the report will be saved in the report folder inside index.html
 //* right click on it and copy full of path of index.html. then paste that path in chrome and hit enter
+
+//* some other commands
+`npx cypress run --reporter cypress-mochawesome-reporter`
