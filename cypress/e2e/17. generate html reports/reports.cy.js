@@ -10,3 +10,4 @@
 
 //* some other commands
 `npx cypress run --reporter cypress-mochawesome-reporter`
+
