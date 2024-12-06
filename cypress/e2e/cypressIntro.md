@@ -154,7 +154,7 @@ describe('suit name', () => {
 
 describe('suit name', () => {
 
-    it('test case 1', () => {
+  it('test case 1', () => {
       expect(true).to.equal(true)
     })
 
