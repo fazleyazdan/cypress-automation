@@ -4,9 +4,9 @@
 
 #### Here i wrote scripts for automating web apps which will give beginners an idea and understanding of automating web apps using cypress. 
 
-#### Cypress : Frontend web Automation Tools. 
-####	          Used for modern web application
-####	          Open Source Software Except (Dashboard)
+#### What is Cypress : Frontend web Automation Tools. 
+* Used for modern web application
+* Open Source Software Except (Dashboard)
 	
 	
 **Traditional web apps** : html, CSS, JS etc.
@@ -23,11 +23,11 @@
 #### Similarly to run cypress you need to setup Node.js Env
 #### It comes with NPM module. We will install libraries from npm
 
-**Who can use Cypress** : 
-##### --> to automate End-to-End(E2E) test cases
-##### --> Integration Tests
-##### --> Unit Test cases 
-##### --> API Testing
+**Usage of Cypress** : 
+* --> toautomate End-to-End(E2E) test cases
+* --> Integration Tests
+* --> Unit Test cases 
+* --> API Testing
 
 **So the answer is both Dev and QA people can also use it**
 
