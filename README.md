@@ -13,9 +13,9 @@
 **Traditional web apps** : html, CSS, JS etc.
 **Modern Web apps** : React , Node, Angular etc.
 
-*Through cypress we can automate any application which runs on browser*
+*Through cypress we can automate both traditional & modern web apps running on browser*
 
-**Language** : JS is used in Cypress
+**Language** : JS & TS is used in Cypress
 
 **Environment** : Node.js
 *Cypress built on node JS env*
