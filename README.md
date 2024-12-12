@@ -4,7 +4,8 @@
 
 #### Here i wrote scripts for automating web apps which will give beginners an idea and understanding of automating web apps using cypress. 
 
-#### What is Cypress : Frontend web Automation Tools. 
+#### What is Cypress ? 
+* Frontend web Automation Tools. 
 * Used for modern web application
 * Open Source Software Except (Dashboard)
 	
